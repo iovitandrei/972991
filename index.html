@@ -1,37 +1,286 @@
 <!doctype html>
 <html lang="ro">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Politica de confidențialitate pentru extensia Chrome TollRo Gabarit.">
-<title>Politica de confidențialitate | TollRo Gabarit</title>
-<style>
-:root{color-scheme:light;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#202338;background:#f7f8fd}*{box-sizing:border-box}body{margin:0;line-height:1.65}.header{background:linear-gradient(120deg,#3620ac,#5b42d9);color:white;padding:42px 24px}header div,main,footer{max-width:850px;margin:auto}h1{font-size:clamp(1.8rem,4vw,2.55rem);line-height:1.2;margin:10px 0}h2{color:#3620ac;font-size:1.13rem;margin-top:30px}main{background:white;padding:25px 36px 42px;margin:28px auto;border-radius:16px;box-shadow:0 6px 28px #17163710}p,li{font-size:1rem}.muted{color:#6c7082}.header .muted{color:#ddd8ff}.tag{display:inline-block;background:#ffffff28;border:1px solid #ffffff59;padding:3px 12px;border-radius:40px;font-size:.9rem}a{color:#3925c2}footer{padding:0 22px 35px;color:#71758b;font-size:.85rem}@media(max-width:600px){main{margin:0;border-radius:0;padding:22px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f7fc">
+  <meta name="description" content="Politica de confidențialitate TollRo Gabarit: date utilizate, permisiuni Chrome, stocare locală, fișiere JSON/CSV, securitate și contact.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iovitandrei.github.io/972991/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="Politica de confidențialitate | TollRo Gabarit">
+  <meta property="og:description" content="Cum utilizează TollRo Gabarit datele vehiculelor, permisiunile Chrome și stocarea locală.">
+  <title>Politica de confidențialitate | TollRo Gabarit</title>
+  <style>
+    :root {
+      --ink: #181c35;
+      --muted: #5e6680;
+      --subtle: #7b8296;
+      --line: #e6e8f2;
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --primary: #5a45d8;
+      --primary-dark: #4432ba;
+      --accent: #a29bff;
+      --surface: #f1f0ff;
+      --radius: 20px;
+      --shadow: 0 14px 45px rgba(31, 35, 91, .055);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body { margin: 0; font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+    a { color: var(--primary-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #25147f; }
+    a:focus-visible { outline: 3px solid #aaa2ff; outline-offset: 3px; border-radius: 3px; }
+    .container { width: min(1152px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { background: #fff; border-bottom: 1px solid var(--line); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 18px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 800; text-decoration: none; letter-spacing: -.03em; font-size: 19px; }
+    .brand-logo { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: white; background: linear-gradient(135deg, #312e9d, #7348f4); box-shadow: 0 6px 12px rgba(86,64,198,.16); }
+    .brand-logo svg { width: 25px; height: 25px; }
+    .top-tag { border: 1px solid #e2e2fb; color: #5245ad; padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; white-space: nowrap; background: #f8f7ff; }
+    .hero { margin-top: 30px; padding: clamp(28px, 5vw, 54px); color: white; border-radius: 25px; overflow: hidden; position: relative; background: linear-gradient(115deg, #22235e 0%, #4931a7 57%, #684de3 100%); box-shadow: 0 14px 35px rgba(44, 29, 120, .14); }
+    .hero::before { content: ""; position: absolute; width: 420px; height: 420px; border-radius: 50%; right: -160px; top: -260px; border: 78px solid rgba(255,255,255,.06); }
+    .hero::after { content: ""; position: absolute; width: 300px; height: 300px; border-radius: 50%; right: 8%; bottom: -230px; background: rgba(255,255,255,.055); }
+    .hero>* { position: relative; z-index: 1; }
+    .eyebrow { display: inline-flex; border: 1px solid rgba(255,255,255,.26); border-radius: 999px; color: #eceaff; font-size: 12px; font-weight: 750; padding: 5px 13px; letter-spacing: .055em; text-transform: uppercase; }
+    h1 { font-size: clamp(30px, 4vw, 47px); letter-spacing: -.045em; line-height: 1.13; max-width: 780px; margin: 21px 0 15px; }
+    .hero p { margin: 0; max-width: 750px; color: #e5e1ff; font-size: 16px; line-height: 1.75; }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px 22px; margin-top: 27px; color: #eeebff; font-size: 13px; }
+    .meta strong { color: white; }
+    .layout { display: grid; grid-template-columns: 253px minmax(0, 1fr); align-items: start; gap: 24px; margin: 26px auto 50px; }
+    .side { position: sticky; top: 23px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 14px; }
+    .side-title { padding: 0 13px; margin: 0 0 12px; color: #7a8296; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .11em; }
+    .side nav { display: grid; gap: 3px; }
+    .side a { display: flex; align-items: baseline; gap: 9px; font-size: 13px; line-height: 1.4; padding: 10px 13px; border-radius: 9px; color: #4f5773; text-decoration: none; }
+    .side a span { font-variant-numeric: tabular-nums; color: #8982c4; font-size: 11px; min-width: 21px; }
+    .side a:hover, .side a:focus-visible { background: #f4f2ff; color: var(--primary-dark); }
+    .content { min-width: 0; }
+    .intro { background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px clamp(23px, 4vw, 36px); margin-bottom: 16px; }
+    .intro .lead { margin: 0; font-size: 17px; line-height: 1.75; color: #424a63; }
+    .keypoints { margin: 23px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; }
+    .point { border-radius: 13px; padding: 15px; background: #f7f6ff; border: 1px solid #eeebff; }
+    .point strong { display: block; font-size: 13px; color: #4233a4; margin-bottom: 3px; }
+    .point small { display: block; color: #656b85; line-height: 1.5; font-size: 12px; }
+    .section { background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(24px, 4vw, 35px); margin-bottom: 16px; scroll-margin-top: 20px; }
+    h2 { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.3; letter-spacing: -.025em; margin: 0 0 17px; }
+    h2 .n { display: inline-flex; align-items: center; justify-content: center; width: 31px; height: 31px; margin-right: 12px; border-radius: 9px; font-size: 13px; background: #f0edff; color: #5a46c9; vertical-align: 2px; }
+    h3 { font-size: 16px; line-height: 1.5; margin: 23px 0 9px; }
+    p { margin: 12px 0; }
+    .section p, .section li { color: #49516c; }
+    .section p:last-child { margin-bottom: 0; }
+    ul { padding-left: 22px; margin: 12px 0; }
+    li { padding-left: 4px; margin: 8px 0; }
+    strong { color: #262b45; }
+    code { border-radius: 5px; background: #f3f2fc; color: #39259a; padding: 2px 5px; overflow-wrap: anywhere; font-size: 13px; }
+    .note { background: #f8f7ff; border: 1px solid #e7e3ff; border-left: 4px solid var(--primary); border-radius: 11px; padding: 14px 18px; margin: 17px 0 0; color: #434767; }
+    .note p { margin: 0; }
+    .perm { display: grid; grid-template-columns: 140px minmax(0, 1fr); border-top: 1px solid #eaeaf4; gap: 12px; padding: 15px 0; }
+    .perm:first-of-type { border-top: 0; }
+    .perm dt { color: #3b2bb1; font-weight: 800; font-size: 14px; }
+    .perm dd { margin: 0; color: #4b536c; }
+    .perm-list { margin: 12px 0 0; }
+    .mail { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #ddd9fa; border-radius: 11px; background: #f7f6ff; color: #4432b0; font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+    .mail:hover { background: #efecff; }
+    .footer { border-top: 1px solid var(--line); background: #fff; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 25px; font-size: 13px; color: #747b90; }
+    .footer strong { color: #424965; }
+    @media (max-width: 870px) {
+      .layout { grid-template-columns: 1fr; }
+      .side { position: static; padding: 16px; }
+      .side nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .hero { margin-top: 18px; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 28px, 1152px); }
+      .topbar-inner { padding-block: 13px; }
+      .brand { font-size: 16px; }
+      .brand-logo { width: 36px; height: 36px; }
+      .top-tag { font-size: 10px; padding: 4px 8px; }
+      .hero { padding: 27px 23px; border-radius: 19px; }
+      .hero p { font-size: 14px; }
+      .layout { gap: 14px; margin-top: 14px; }
+      .side nav { grid-template-columns: 1fr; }
+      .side a { padding: 7px 10px; }
+      .keypoints { grid-template-columns: 1fr; }
+      .intro, .section { border-radius: 17px; padding: 22px 20px; }
+      .perm { grid-template-columns: 1fr; gap: 3px; }
+      .footer-inner { padding-block: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; color: black; font-size: 11pt; }
+      .topbar, .side { display: none; }
+      .container { width: 100%; }
+      .hero { margin: 0; background: white !important; color: black; border: none; border-bottom: 2px solid #333; box-shadow: none; padding: 16px 0; }
+      .hero p, .meta, .eyebrow { color: black; }
+      .layout { display: block; margin: 0; }
+      .intro, .section { border: none; box-shadow: none; padding: 15px 0; break-inside: avoid; }
+      .keypoints { display: none; }
+      a { color: black; }
+    }
+  </style>
 </head>
 <body>
-<header class="header"><div><span class="tag">Extensie Google Chrome</span><h1>Politica de confidențialitate</h1><p>TollRo Gabarit</p><p class="muted">Ultima actualizare: 4 noiembrie 2026</p></div></header>
-<main>
-<p>Această pagină explică modul în care extensia <strong>TollRo Gabarit</strong> utilizează datele necesare administrării vehiculelor și completării formularelor de pe <strong>portal.etoll.ro</strong>.</p>
-<h2>1. Ce informații utilizează extensia</h2>
-<p>La introducerea de către utilizator, extensia poate prelucra numere de înmatriculare, serii de șasiu, dimensiuni, greutăți și preferințe de funcționare, cum ar fi separatorul zecimal și activarea completării automate. Unele date despre vehicule pot reprezenta date cu caracter personal, în funcție de context.</p>
-<h2>2. Scopul utilizării</h2>
-<p>Aceste informații sunt utilizate pentru a salva și identifica vehiculele, pentru a permite importul și exportul acestora și pentru a completa câmpurile relevante din formularele portalului eToll la solicitarea utilizatorului sau potrivit setărilor configurate.</p>
-<h2>3. Stocare și control</h2>
-<p>Informațiile despre vehicule și setările extensiei sunt păstrate în spațiul de stocare oferit de browser prin mecanismul Chrome Storage. Utilizatorul poate modifica sau șterge înregistrările din interfața extensiei și poate exporta lista vehiculelor.</p>
-<h2>4. Accesul la site-uri și transmiterea datelor</h2>
-<p>Extensia utilizează accesul la <strong>portal.etoll.ro</strong> pentru a identifica și completa câmpurile aferente vehiculelor. Nu este concepută pentru colectarea istoricului general de navigare sau pentru publicitate. Datele completate în portal pot ajunge la operatorul acestuia atunci când utilizatorul trimite formularul; această prelucrare este supusă politicilor operatorului portalului.</p>
-<p>Potrivit funcționalităților descrise pentru această versiune, extensia nu include un serviciu propriu de transmitere a bazei de vehicule către dezvoltator. Această declarație trebuie revizuită dacă funcționalitatea extensiei se schimbă.</p>
-<h2>5. Partajarea și comercializarea datelor</h2>
-<p>Dezvoltatorul nu intenționează să vândă datele introduse în extensie, să le folosească pentru publicitate comportamentală sau pentru evaluarea solvabilității. Exportul sau introducerea datelor în portal sunt acțiuni controlate de utilizator.</p>
-<h2>6. Securitate</h2>
-<p>Extensia utilizează mecanismele de stocare ale browserului Chrome. Este recomandată protejarea accesului la dispozitiv și la profilul browserului. Niciun sistem informatic nu poate garanta securitate absolută.</p>
-<h2>7. Actualizări</h2>
-<p>Politica poate fi actualizată în cazul modificării extensiei sau a practicilor de prelucrare a datelor. Data ultimei actualizări va fi afișată în partea de sus a paginii.</p>
-<h2>8. Contact</h2>
-<p>Pentru întrebări despre această politică, scrie la: <strong><a href="mailto:alexandru.iovita@gmail.com">alexandru.iovita@gmail.com</a></strong>.</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#inceput" aria-label="TollRo Gabarit — începutul paginii">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M4 20.5h24M7 20.5v-7l3-5h12l3 5v7M10 8.5v12M22 8.5v12M7 13.5h18"/>
+            <circle cx="10" cy="24" r="2"/><circle cx="23" cy="24" r="2"/>
+          </svg>
+        </span>
+        TollRo Gabarit
+      </a>
+      <span class="top-tag">Extensie pentru Google Chrome</span>
+    </div>
+  </header>
 
-</main>
-<footer>TollRo Gabarit · Politica de confidențialitate</footer>
+  <div class="container" id="inceput">
+    <section class="hero" aria-labelledby="page-title">
+      <span class="eyebrow">Transparență și protecția datelor</span>
+      <h1 id="page-title">Politica de confidențialitate</h1>
+      <p>Află ce informații utilizează TollRo Gabarit, unde sunt păstrate și cum îți poți controla datele.</p>
+      <div class="meta"><span><strong>Extensie:</strong> TollRo Gabarit</span><span><strong>Versiune analizată:</strong> 1.2.3</span><span><strong>Ultima actualizare:</strong> 12 noiembrie 2026</span></div>
+    </section>
+
+    <div class="layout">
+      <aside class="side" aria-label="Cuprinsul politicii">
+        <p class="side-title">Cuprins</p>
+        <nav>
+          <a href="#cine-suntem"><span>01</span> Dezvoltator și contact</a>
+          <a href="#date"><span>02</span> Ce date sunt utilizate</a>
+          <a href="#scopuri"><span>03</span> Scopurile utilizării</a>
+          <a href="#permisiuni"><span>04</span> Permisiunile Chrome</a>
+          <a href="#stocare"><span>05</span> Stocare și păstrare</a>
+          <a href="#transmitere"><span>06</span> Transmitere și destinatari</a>
+          <a href="#baza-legala"><span>07</span> Temeiul prelucrării</a>
+          <a href="#securitate"><span>08</span> Securitatea datelor</a>
+          <a href="#drepturi"><span>09</span> Drepturile utilizatorilor</a>
+          <a href="#site"><span>10</span> Această pagină web</a>
+          <a href="#actualizari"><span>11</span> Actualizările politicii</a>
+          <a href="#contact"><span>12</span> Contact</a>
+        </nav>
+      </aside>
+
+      <main class="content" id="continut">
+        <div class="intro">
+          <p class="lead">TollRo Gabarit este o extensie Chrome care ajută utilizatorii să administreze local o listă de vehicule și să completeze datele tehnice ale acestora în formularele de pe <a href="https://portal.etoll.ro/" rel="noopener noreferrer" target="_blank">portal.etoll.ro</a>. Extensia folosește datele necesare acestei funcții și, în versiunea 1.2.3 analizată, nu conține un mecanism propriu de încărcare a bazei de vehicule pe un server al dezvoltatorului.</p>
+          <div class="keypoints" aria-label="Aspecte esențiale">
+            <div class="point"><strong>Stocare locală</strong><small>În Chrome și, dacă este activată opțiunea, într-un fișier JSON pe dispozitiv.</small></div>
+            <div class="point"><strong>Acces limitat</strong><small>Extensia acționează pe portal.etoll.ro, nu pe toate site-urile vizitate.</small></div>
+            <div class="point"><strong>Fără vânzarea datelor</strong><small>Datele vehiculelor nu sunt utilizate de dezvoltator pentru publicitate sau comercializare.</small></div>
+          </div>
+        </div>
+
+        <section class="section" id="cine-suntem" aria-labelledby="h1">
+          <h2 id="h1"><span class="n">01</span> Cine dezvoltă extensia</h2>
+          <p><strong>Produs:</strong> TollRo Gabarit, extensie pentru browserul Google Chrome.</p>
+          <p><strong>Dezvoltator și contact:</strong> Alexandru Iovița, <a href="mailto:alexandru.iovita@gmail.com">alexandru.iovita@gmail.com</a>.</p>
+          <p>Prezenta politică privește utilizarea extensiei și această pagină de informare. Operatorul portalului eToll, Google și furnizorul de găzduire GitHub pot avea propriile responsabilități și politici pentru serviciile lor.</p>
+        </section>
+
+        <section class="section" id="date" aria-labelledby="h2">
+          <h2 id="h2"><span class="n">02</span> Ce informații utilizează extensia</h2>
+          <p>Datele introduse, importate sau selectate de utilizator pot include:</p>
+          <ul>
+            <li><strong>Identificarea vehiculului:</strong> numărul de înmatriculare, denumirea sau descrierea aleasă de utilizator și, opțional, seria de șasiu (VIN).</li>
+            <li><strong>Date tehnice:</strong> lățime, lungime, înălțime și greutate.</li>
+            <li><strong>Preferințe:</strong> completarea automată, separatorul zecimal și setările legate de baza locală de date.</li>
+            <li><strong>Informații din pagina eToll:</strong> numere de înmatriculare, etichete și câmpuri ale formularelor necesare identificării vehiculului și completării valorilor corecte.</li>
+            <li><strong>Fișierele selectate de utilizator:</strong> conținutul fișierelor CSV, JSON sau TXT importate pentru actualizarea listei de vehicule.</li>
+          </ul>
+          <p>Numărul de înmatriculare și seria de șasiu pot constitui date cu caracter personal atunci când pot fi asociate unei persoane fizice. Extensia nu solicită în mod intenționat parole, date bancare sau informații medicale.</p>
+        </section>
+
+        <section class="section" id="scopuri" aria-labelledby="h3">
+          <h2 id="h3"><span class="n">03</span> Pentru ce sunt folosite datele</h2>
+          <ul>
+            <li>Crearea, căutarea, modificarea și ștergerea vehiculelor din lista gestionată de utilizator.</li>
+            <li>Recunoașterea numărului de înmatriculare pe portalul eToll și asocierea lui cu vehiculul memorat local.</li>
+            <li>Completarea automată sau la cerere a dimensiunilor, greutății și, unde este disponibil, a altor câmpuri relevante.</li>
+            <li>Importul vehiculelor din fișiere locale și exportul listei în format CSV.</li>
+            <li>Crearea și actualizarea unei copii JSON pe dispozitiv, când funcția de bază pe disc este activată.</li>
+          </ul>
+          <p>Funcționalitățile de mai sus sunt cele ale extensiei analizate la versiunea 1.2.3. Nu sunt incluse module proprii de publicitate comportamentală, analiză a istoricului general de navigare sau transmitere a bazei de vehicule către dezvoltator.</p>
+        </section>
+
+        <section class="section" id="permisiuni" aria-labelledby="h4">
+          <h2 id="h4"><span class="n">04</span> Permisiunile solicitate în Chrome</h2>
+          <p>Extensia declară următoarele permisiuni în fișierul său <code>manifest.json</code>:</p>
+          <dl class="perm-list">
+            <div class="perm"><dt><code>storage</code></dt><dd>Pentru a salva în stocarea locală Chrome lista de vehicule, setările, momentul salvării și opțiunile legate de fișierul de pe disc.</dd></div>
+            <div class="perm"><dt><code>downloads</code></dt><dd>Pentru descărcarea fișierelor cu datele vehiculelor. În modul „Bază pe disc”, este folosită și pentru actualizarea automată a fișierului JSON la modificări.</dd></div>
+            <div class="perm"><dt><code>https://portal.etoll.ro/*</code></dt><dd>Pentru a identifica numărul de înmatriculare și câmpurile formularului eToll și pentru a introduce valorile corespunzătoare vehiculului selectat. Această permisiune nu oferă extensiei acces general la toate site-urile.</dd></div>
+          </dl>
+          <p>Extensia utilizează și mesaje interne între componentele sale pentru coordonarea completării formularului și afișarea stării operațiunii.</p>
+        </section>
+
+        <section class="section" id="stocare" aria-labelledby="h5">
+          <h2 id="h5"><span class="n">05</span> Unde și cât timp sunt păstrate informațiile</h2>
+          <h3>Stocare în browser</h3>
+          <p>Lista vehiculelor și setările sunt păstrate în <code>chrome.storage.local</code>, în profilul Chrome utilizat. Numărul de înmatriculare identificat pe portal poate fi reținut temporar și în memoria extensiei sau în <code>sessionStorage</code> pentru continuitatea pașilor din formular.</p>
+          <h3>Fișierul de pe disc</h3>
+          <p>Dacă utilizatorul activează funcția „Bază pe disc” sau importă date într-un mod care activează această funcție, extensia poate crea ori actualiza automat un fișier JSON, folosind permisiunea <code>downloads</code>. Calea implicită este <code>TollRo/tollro-vehicule.json</code> în directorul de descărcări configurat în Chrome. La crearea inițială se poate afișa un dialog de salvare; actualizările automate ulterioare folosesc calea implicită configurată în codul extensiei.</p>
+          <p>Utilizatorul poate exporta separat lista în CSV și poate importa date din fișiere locale. Fișierele respective se află sub controlul utilizatorului, pe dispozitivul ales.</p>
+          <h3>Păstrare și ștergere</h3>
+          <p>Înregistrările locale rămân disponibile până când utilizatorul le modifică, le șterge sau elimină datele locale prin mecanismele browserului. Dezinstalarea extensiei nu șterge automat fișierele JSON ori CSV deja descărcate pe calculator. Pentru eliminarea completă a copiilor, utilizatorul trebuie să șteargă și fișierele exportate ori salvate pe disc.</p>
+          <div class="note"><p><strong>Important:</strong> fișierele JSON și CSV create de extensie nu sunt criptate suplimentar de aceasta. Protejează-le ca pe orice alt document care poate conține date despre vehicule.</p></div>
+        </section>
+
+        <section class="section" id="transmitere" aria-labelledby="h6">
+          <h2 id="h6"><span class="n">06</span> Transmiterea și partajarea datelor</h2>
+          <p><strong>Către dezvoltator:</strong> versiunea 1.2.3 nu implementează un serviciu propriu care să colecteze sau să sincronizeze automat lista vehiculelor cu un server al dezvoltatorului. Datele introduse în extensie nu sunt vândute și nu sunt folosite de dezvoltator pentru profilare publicitară sau comercializare.</p>
+          <p><strong>Către portalul eToll:</strong> extensia poate introduce date în câmpurile paginii <a href="https://portal.etoll.ro/" rel="noopener noreferrer" target="_blank">portal.etoll.ro</a>. Prelucrarea ulterioară a valorilor din aceste câmpuri, inclusiv o eventuală transmitere prin funcțiile paginii, ține de modul de funcționare a portalului și de interacțiunile utilizatorului. Consultă informările operatorului portalului pentru detalii.</p>
+          <p><strong>Către terți:</strong> nu există în codul analizat o integrare proprie de publicitate, analiză comportamentală sau transfer al bazei de vehicule către brokeri de date. Furnizorii browserului și ai paginii web de informare pot prelucra separat date tehnice legate de utilizarea propriilor servicii.</p>
+          <p>Datele nu sunt transferate de extensie către un server propriu din afara Spațiului Economic European. Accesarea portalului sau a acestei pagini poate implica însă prelucrări independente ale furnizorilor respectivi, în condițiile politicilor lor.</p>
+        </section>
+
+        <section class="section" id="baza-legala" aria-labelledby="h7">
+          <h2 id="h7"><span class="n">07</span> Temeiul și natura prelucrării</h2>
+          <p>Introducerea, memorarea și utilizarea datelor vehiculelor sunt operațiuni locale, necesare funcționalității solicitate și configurate de utilizator. În versiunea analizată, dezvoltatorul nu primește în mod automat aceste date și nu administrează o bază de date centralizată a vehiculelor.</p>
+          <p>Dacă trimiți voluntar un e-mail dezvoltatorului, datele incluse în mesaj sunt prelucrate pentru a răspunde solicitării și a gestiona corespondența, pe baza interesului legitim de a oferi asistență (art. 6 alin. (1) lit. f din Regulamentul (UE) 2016/679), în măsura în care acest temei este aplicabil. Corespondența este păstrată cât este necesar pentru gestionarea solicitării și, dacă este cazul, pentru îndeplinirea obligațiilor legale sau apărarea drepturilor.</p>
+          <p>Pentru datele introduse și transmise în portalul eToll se aplică responsabilitățile și temeiurile de prelucrare stabilite de operatorul acelui serviciu.</p>
+        </section>
+
+        <section class="section" id="securitate" aria-labelledby="h8">
+          <h2 id="h8"><span class="n">08</span> Securitatea informațiilor</h2>
+          <p>Extensia se bazează pe mecanismele Chrome pentru stocarea locală și pe funcțiile browserului pentru descărcarea fișierelor. Accesul automat la paginile web este limitat în manifest la domeniul eToll indicat mai sus.</p>
+          <p>Pentru protejarea datelor, recomandăm utilizarea unui profil Chrome securizat, blocarea dispozitivului și păstrarea fișierelor exportate într-un loc la care au acces doar persoanele autorizate. Stocarea locală nu este echivalentă cu criptarea datelor, iar securitatea absolută nu poate fi garantată.</p>
+        </section>
+
+        <section class="section" id="drepturi" aria-labelledby="h9">
+          <h2 id="h9"><span class="n">09</span> Controlul și drepturile utilizatorilor</h2>
+          <p>Utilizatorul poate vedea, modifica și șterge vehiculele din interfața extensiei, poate exporta lista, poate dezactiva completarea automată și poate gestiona fișierele locale. Pentru eliminarea unei copii JSON sau CSV salvate pe calculator, aceasta trebuie ștearsă manual.</p>
+          <p>În măsura în care dezvoltatorul prelucrează date personale care te privesc, poți solicita accesul, rectificarea, ștergerea, restricționarea prelucrării sau te poți opune prelucrării, potrivit condițiilor prevăzute de GDPR. Poți trimite o solicitare la <a href="mailto:alexandru.iovita@gmail.com">alexandru.iovita@gmail.com</a>. Dezvoltatorul nu poate șterge de la distanță fișierele ori înregistrările păstrate exclusiv pe dispozitivul tău.</p>
+          <p>Ai și dreptul de a depune o plângere la <a href="https://www.dataprotection.ro/" rel="noopener noreferrer" target="_blank">Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</a>, în condițiile legii.</p>
+        </section>
+
+        <section class="section" id="site" aria-labelledby="h10">
+          <h2 id="h10"><span class="n">10</span> Confidențialitatea acestei pagini web</h2>
+          <p>Această politică este găzduită prin <strong>GitHub Pages</strong>. Pagina nu conține cod propriu de publicitate, formulare de colectare a datelor sau instrumente proprii de analiză a vizitatorilor și nu setează intenționat cookie-uri prin codul paginii.</p>
+          <p>La accesarea paginii, GitHub sau infrastructura utilizată pentru găzduire pot prelucra informații tehnice (de exemplu adresa IP, date despre browser ori jurnale de acces), potrivit propriei <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer" target="_blank">declarații de confidențialitate</a>. Această activitate este distinctă de stocarea bazei de vehicule în extensie.</p>
+        </section>
+
+        <section class="section" id="actualizari" aria-labelledby="h11">
+          <h2 id="h11"><span class="n">11</span> Modificări ale politicii</h2>
+          <p>Politica poate fi actualizată dacă se modifică funcționalitățile extensiei, permisiunile, modalitățile de stocare sau cerințele legale. Versiunea publicată pe această pagină indică data ultimei actualizări. Dacă apar modificări semnificative ale modului de utilizare a datelor, utilizatorii vor fi informați prin mijloacele adecvate disponibile în extensie sau în pagina sa de prezentare.</p>
+        </section>
+
+        <section class="section" id="contact" aria-labelledby="h12">
+          <h2 id="h12"><span class="n">12</span> Contact</h2>
+          <p>Pentru întrebări despre politica de confidențialitate, funcționarea extensiei sau solicitări referitoare la date personale, contactează dezvoltatorul:</p>
+          <p><strong>Alexandru Iovița</strong></p>
+          <p><a class="mail" href="mailto:alexandru.iovita@gmail.com?subject=TollRo%20Gabarit%20-%20Confidentialitate">✉ &nbsp; alexandru.iovita@gmail.com</a></p>
+          <div class="note"><p><strong>Respectarea politicii Chrome Web Store:</strong> utilizarea informațiilor obținute prin interfețele Google/Chrome respectă <a href="https://developer.chrome.com/docs/webstore/program-policies/policies" rel="noopener noreferrer" target="_blank">Chrome Web Store User Data Policy</a>, inclusiv cerințele <em>Limited Use</em>. Datele sunt utilizate exclusiv în scopurile funcționale descrise mai sus.</p></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container footer-inner"><span><strong>TollRo Gabarit</strong> · Politica de confidențialitate</span><span>Ultima actualizare: 12 noiembrie 2026</span></div></footer>
 </body>
 </html>
